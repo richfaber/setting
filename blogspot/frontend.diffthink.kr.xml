@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE html>
-<html b:css='false' b:defaultwidgetversion='2' b:layoutsVersion='3' b:responsive='true' b:templateVersion='1.0.0' expr:class='data:blog.languageDirection' expr:dir='data:blog.languageDirection'
-  xmlns='http://www.w3.org/1999/xhtml'
-  xmlns:b='http://www.google.com/2005/gml/b'
-  xmlns:data='http://www.google.com/2005/gml/data'
-  xmlns:expr='http://www.google.com/2005/gml/expr'>
+<html b:css='false' b:defaultwidgetversion='2' b:layoutsVersion='3' b:responsive='true' b:templateVersion='1.0.0' expr:class='data:blog.languageDirection' expr:dir='data:blog.languageDirection' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
   <head>
     <meta content='width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1' name='viewport'/>
     <title>
@@ -13,9 +9,9 @@
     <b:include data='blog' name='all-head-content'/>
 
     <!-- Google Fonts -->
-    <link rel="preconnect" href="//fonts.gstatic.com" />
+    <link href='//fonts.gstatic.com' rel='preconnect'/>
     <link href='//fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i,700,700i|Poppins:400,600,700' media='all' rel='stylesheet' type='text/css'/>
-    <link href="//fonts.googleapis.com/css2?family=Nanum+Gothic&amp;display=swap" rel="stylesheet" />
+    <link href='https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&amp;display=swap' rel='stylesheet'/>
     <link href='//stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet'/>
 
     <!-- Template Style CSS -->
@@ -52,9 +48,9 @@ Author Url:  https://www.templatesyard.com/
 </Group>
 
 <!-- Extra Variables -->
-<Variable name="body.text.font" description="Font" hideEditor="true" type="font" default="13px Nanum Gothic, sans-serif" value="13px Nanum Gothic, sans-serif"/>
+<Variable name="body.text.font" description="Font" hideEditor="true" type="font" default="13px Noto Sans KR, sans-serif" value="13px Noto Sans KR, sans-serif"/>
 <Variable name="posts.background.color" description="Post background color" hideEditor="true" type="color" default="#ffffff" value="#ffffff"/>
-<Variable name="tabs.font" description="Font 2" hideEditor="true" type="font" default="13px Nanum Gothic, sans-serif" value="13px Nanum Gothic, sans-serif"/>
+<Variable name="tabs.font" description="Font 2" hideEditor="true" type="font" default="13px Noto Sans KR, sans-serif" value="13px Noto Sans KR, sans-serif"/>
 <Variable name="posts.title.color" description="Post title color" hideEditor="true" type="color" default="#000000" value="#000000"/>
 <Variable name="posts.text.color" description="Post text color" hideEditor="true" type="color" default="#656565" value="#4b4b4b"/>
 <Variable name="posts.icons.color" description="Post icons color" hideEditor="true" type="color" default="$(main.color)" value="#3c5a98"/>
@@ -134,7 +130,7 @@ abbr{
  body{
     background:$(body.background);
     background-color:$(body.background.color);
-    font-family:'Nanum Gothic',sans-serif;
+    font-family:'Noto Sans KR',sans-serif;
     font-size:14px;
     font-weight:400;
     color:$(body.text.color);
@@ -143,7 +139,7 @@ abbr{
     padding:0
 }
  h1,h2,h3,h4,h5,h6{
-    font-family: 'Nanum Gothic', sans-serif;
+    font-family: 'Noto Sans KR', sans-serif;
     font-weight: 600;
 }
  #outer-wrapper{
@@ -187,9 +183,6 @@ abbr{
     color:transparent!important
 }
 .index-post .post-thumb {
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    border-radius: 10px;
 }
  .post-thumb{
     display:block;
@@ -1226,7 +1219,8 @@ box-sizing: border-box;
     display:block;
     z-index:1;
     overflow:hidden;
-    border-radius:3px
+    border: 1px solid #b3b3b3;
+    box-sizing: border-box;
 }
  .index-post .post-info{
     float:left;
@@ -1611,7 +1605,7 @@ box-sizing: border-box;
     margin:0 0 0 2px
 }
  .post-nav p{
-    font-family: 'Poppins',Nanum Gothic,sans-serif;
+    font-family: 'Poppins',Noto Sans KR,sans-serif;
     font-size:12px;
     font-weight:400;
     line-height:1.5em;
@@ -1875,7 +1869,7 @@ box-sizing: border-box;
     color:$(main.color)
 }
  .comments .comments-content .user{
-    font-family: 'Poppins',Nanum Gothic,sans-serif;
+    font-family: 'Poppins',Noto Sans KR,sans-serif;
     font-style:normal;
     font-weight:400;
     display:block
@@ -2114,6 +2108,7 @@ box-sizing: border-box;
     margin:0 0 15px
 }
 .post-body h1 {
+  display: none;
   font-size:32px;
   margin: 40px 0 30px;
 }
@@ -3039,7 +3034,7 @@ float:right;
     font-weight:400;
     margin:0 5px 0 0
 }
-]]>    </b:skin>
+    ]]></b:skin>
     <style>
 /*-------Typography and ShortCodes-------*/
 .FollowByEmail {
@@ -3097,12 +3092,12 @@ body#layout #hot-wrapper .widget{display:block}
     <script type='text/javascript'>
 //      <![CDATA[
 // Global variables with content. "Available for Edit"
-var monthFormat = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
-    noThumbnail = "https://4.bp.blogspot.com/-O3EpVMWcoKw/WxY6-6I4--I/AAAAAAAAB2s/KzC0FqUQtkMdw7VzT6oOR_8vbZO6EJc-ACK4BGAYYCw/w680/nth.png",
-    postPerPage = 7,
+var monthFormat = ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+    noThumbnail = 'https://4.bp.blogspot.com/-O3EpVMWcoKw/WxY6-6I4--I/AAAAAAAAB2s/KzC0FqUQtkMdw7VzT6oOR_8vbZO6EJc-ACK4BGAYYCw/w680/nth.png',
+    postPerPage = 10,
     fixedSidebar = true,
-    commentsSystem = "blogger",
-    disqusShortname = "soratemplates";
+    commentsSystem = 'blogger',
+    disqusShortname = 'soratemplates';
 //]]>
     </script>
 
@@ -3331,7 +3326,7 @@ var monthFormat = ["January", "February", "March", "April", "May", "June", "July
         </b:widget>
         <b:widget id='LinkList71' locked='true' title='Default Variables' type='LinkList' version='2' visible='true'>
           <b:widget-settings>
-            <b:widget-setting name='link-3'>5</b:widget-setting>
+            <b:widget-setting name='link-3'>20</b:widget-setting>
             <b:widget-setting name='sorting'>NONE</b:widget-setting>
             <b:widget-setting name='text-1'>commentsSystem</b:widget-setting>
             <b:widget-setting name='link-1'>blogger</b:widget-setting>
@@ -3561,7 +3556,7 @@ var monthFormat = ["January", "February", "March", "April", "May", "June", "July
         <!-- Featured Wrapper -->
         <div class='row' id='hot-wrapper'>
           <b:section id='hot-section' maxwidgets='1' name='Hot Posts' showaddelement='yes'>
-            <b:widget id='HTML2' locked='false' title='' type='HTML' visible='true'>
+            <b:widget id='HTML2' locked='false' title='' type='HTML' version='2' visible='true'>
               <b:widget-settings>
                 <b:widget-setting name='content'>random/hot-posts</b:widget-setting>
               </b:widget-settings>
@@ -3678,7 +3673,7 @@ var monthFormat = ["January", "February", "March", "April", "May", "June", "July
               </div>
               <div class='clearfix'/>
               <b:section class='home-ad' id='home-ad' maxwidgets='1' name='Home Ads' showaddelement='yes'>
-                <b:widget id='AdSense3' locked='false' title='' type='AdSense' visible='true'>
+                <b:widget id='AdSense3' locked='false' title='' type='AdSense' version='2' visible='true'>
                   <b:widget-settings>
                     <b:widget-setting name='style.bgcolor'>#ffffff</b:widget-setting>
                     <b:widget-setting name='style.textcolor'>#000000</b:widget-setting>
@@ -4175,7 +4170,7 @@ x-)</div>
               }
         </script>
       </b:includable>
-      <b:includable id='postCategory' var='post'>
+                <b:includable id='postCategory' var='post'>
         <!-- Post Label/Category -->
         <b:if cond='data:post.labels'>
           <a class='post-tag' expr:href='data:post.labels.first.url'>
@@ -4183,7 +4178,7 @@ x-)</div>
           </a>
         </b:if>
       </b:includable>
-      <b:includable id='postCommentsAndAd' var='post'>
+                <b:includable id='postCommentsAndAd' var='post'>
         <!-- Post, Comments and Ads -->
         <!-- Post Content Index and Item -->
         <div class='blog-post hentry'>
@@ -4199,7 +4194,7 @@ x-)</div>
           </div>
         </b:if>
       </b:includable>
-      <b:includable id='postCommentsLink'>
+                <b:includable id='postCommentsLink'>
         <b:if cond='data:view.isMultipleItems'>
           <span class='byline post-comment-link container'>
             <b:include cond='data:post.commentSource != 1' name='commentsLink'/>
@@ -4207,7 +4202,7 @@ x-)</div>
           </span>
         </b:if>
       </b:includable>
-      <b:includable id='postFeaturedImage' var='post'>
+                <b:includable id='postFeaturedImage' var='post'>
         <!-- Post Featured Image on Index -->
         <div class='post-image-wrap'>
           <b:include data='post' name='postCategory'/>
@@ -4220,7 +4215,7 @@ x-)</div>
           </a>
         </div>
       </b:includable>
-      <b:includable id='postFooter' var='post'>
+                <b:includable id='postFooter' var='post'>
         <!-- Post Footer Itens -->
         <div class='post-footer'>
           <!-- Navigation, About Author an Related Posts -->
@@ -4229,22 +4224,22 @@ x-)</div>
           <b:include cond='data:allBylineItems.backlinks' data='post' name='postRelated'/>
         </div>
       </b:includable>
-      <b:includable id='postFooterAuthorProfile' var='post'>
+                <b:includable id='postFooterAuthorProfile' var='post'>
         <b:comment>Disabled</b:comment>
       </b:includable>
-      <b:includable id='postHeader' var='post'>
+                <b:includable id='postHeader' var='post'>
         <b:include cond='data:view.isPost' data='post' name='postBreadcrumbs'/>
         <b:include data='post' name='postTitle'/>
         <b:include cond='data:view.isPost' data='post' name='headerByline'/>
       </b:includable>
-      <b:includable id='postJumpLink' var='post'>
+                <b:includable id='postJumpLink' var='post'>
         <b:if cond='data:blog.jumpLinkMessage != &quot;hide&quot;'>
           <a class='read-more' expr:href='data:post.url'>
             <data:blog.jumpLinkMessage/>
           </a>
         </b:if>
       </b:includable>
-      <b:includable id='postLabels' var='post'>
+                <b:includable id='postLabels' var='post'>
         <b:if cond='data:allBylineItems.labels'>
           <b:if cond='data:post.labels'>
             <div class='post-labels'>
@@ -4259,10 +4254,10 @@ x-)</div>
           </b:if>
         </b:if>
       </b:includable>
-      <b:includable id='postMeta' var='post'>
+                <b:includable id='postMeta' var='post'>
         <b:include data='post' name='postMetadataJSON'/>
       </b:includable>
-      <b:includable id='postNavigation' var='post'>
+                <b:includable id='postNavigation' var='post'>
         <!-- Post Navigation Item -->
         <ul class='post-nav'>
           <li class='post-next'>
@@ -4313,10 +4308,10 @@ x-)</div>
           </li>
         </ul>
       </b:includable>
-      <b:includable id='postPagination'>
+                <b:includable id='postPagination'>
         <b:comment>Disabled</b:comment>
       </b:includable>
-      <b:includable id='postReactions' var='post'>
+                <b:includable id='postReactions' var='post'>
         <!-- Post Reactions -->
         <b:if cond='data:allBylineItems.reactions'>
           <div class='post-reactions'>
@@ -4329,7 +4324,7 @@ x-)</div>
           </div>
         </b:if>
       </b:includable>
-      <b:includable id='postRelated' var='post'>
+                <b:includable id='postRelated' var='post'>
         <!-- Related Posts -->
         <div id='related-wrap'>
           <div class='title-wrap'>
@@ -4346,7 +4341,7 @@ x-)</div>
           </div>
         </div>
       </b:includable>
-      <b:includable id='postShareButtons' var='post'>
+                <b:includable id='postShareButtons' var='post'>
         <!-- Post ShareButtons -->
         <b:if cond='data:allBylineItems.share'>
           <div class='post-share'>
@@ -4379,16 +4374,16 @@ x-)</div>
           </div>
         </b:if>
       </b:includable>
-      <b:includable id='postShortMeta'>
+                <b:includable id='postShortMeta'>
         <b:comment>Disabled</b:comment>
       </b:includable>
-      <b:includable id='postSummary' var='post'>
+                <b:includable id='postSummary' var='post'>
         <!-- Post Summary -->
         <p class='post-snippet'>
           <b:eval expr='data:post.snippets.long snippet { length: 200 }'/>
         </p>
       </b:includable>
-      <b:includable id='postTimestamp' var='post'>
+                <b:includable id='postTimestamp' var='post'>
         <!-- Post Timestamp -->
         <b:if cond='data:allBylineItems.timestamp'>
           <span class='post-date published' expr:datetime='data:post.date.iso8601'>
@@ -4396,7 +4391,7 @@ x-)</div>
           </span>
         </b:if>
       </b:includable>
-      <b:includable id='postTitle' var='post'>
+                <b:includable id='postTitle' var='post'>
         <!-- Post Title Index and Item -->
         <b:if cond='data:view.isMultipleItems'>
           <h2 class='post-title'>
@@ -4411,10 +4406,10 @@ x-)</div>
           </h1>
         </b:if>
       </b:includable>
-      <b:includable id='previousPageLink'>
+                <b:includable id='previousPageLink'>
         <b:comment>Disabled</b:comment>
       </b:includable>
-      <b:includable id='searchMessage'>
+                <b:includable id='searchMessage'>
         <!-- Search Message -->
         <b:if cond='data:view.search.query'>
           <div class='queryMessage'>
@@ -4493,7 +4488,7 @@ x-)</div>
           </div>
         </b:if>
       </b:includable>
-      <b:includable id='threadedCommentForm' var='post'>
+                <b:includable id='threadedCommentForm' var='post'>
         <div class='comment-form'>
           <a name='comment-form'/>
           <b:if cond='data:this.messages.blogComment != &quot;&quot;'>
@@ -4510,7 +4505,7 @@ x-)</div>
           </script>
         </div>
       </b:includable>
-      <b:includable id='threadedCommentJs' var='post'>
+                <b:includable id='threadedCommentJs' var='post'>
         <script async='async' expr:src='data:post.commentSrc' type='text/javascript'/>
         <b:template-script inline='true' name='threaded_comments'/>
         <script type='text/javascript'>
@@ -4523,7 +4518,7 @@ x-)</div>
 );
         </script>
       </b:includable>
-      <b:includable id='threadedComments' var='post'>
+                <b:includable id='threadedComments' var='post'>
         <section class='comments threaded' expr:data-embed='data:post.embedCommentForm' expr:data-num-comments='data:post.numberOfComments' id='comments'>
           <a name='comments'/>
 
@@ -4554,7 +4549,7 @@ x-)</div>
           </b:if>
         </section>
       </b:includable>
-      <b:includable id='threadedCommentsDisqus' var='post'>
+                <b:includable id='threadedCommentsDisqus' var='post'>
         <script type='text/javascript'>
                 var disqus_blogger_current_url = &quot;<data:blog.canonicalUrl/>
 &quot;;
@@ -4568,42 +4563,42 @@ x-)</div>
 &quot;;
   </script>
 </b:includable>
-</b:widget>
-</b:section>
+              </b:widget>
+            </b:section>
 </div>
 
 <!-- Sidebar Wrapper -->
 <div id='sidebar-wrapper'>
 <b:section class='sidebar' id='social-widget' maxwidgets='1' name='Social Widget' showaddelement='yes'>
-<b:widget id='LinkList75' locked='true' title='Social Plugin' type='LinkList' version='2' visible='false'>
-<b:widget-settings>
-  <b:widget-setting name='text-9'>rss</b:widget-setting>
-  <b:widget-setting name='link-9'>#</b:widget-setting>
-  <b:widget-setting name='text-8'>whatsapp</b:widget-setting>
-  <b:widget-setting name='link-7'>#</b:widget-setting>
-  <b:widget-setting name='link-8'>#</b:widget-setting>
-  <b:widget-setting name='link-5'>#</b:widget-setting>
-  <b:widget-setting name='link-6'>#</b:widget-setting>
-  <b:widget-setting name='link-3'>#</b:widget-setting>
-  <b:widget-setting name='link-4'>#</b:widget-setting>
-  <b:widget-setting name='text-1'>twitter</b:widget-setting>
-  <b:widget-setting name='text-0'>facebook</b:widget-setting>
-  <b:widget-setting name='text-3'>reddit</b:widget-setting>
-  <b:widget-setting name='text-2'>linkedin</b:widget-setting>
-  <b:widget-setting name='text-5'>vk</b:widget-setting>
-  <b:widget-setting name='text-4'>pinterest</b:widget-setting>
-  <b:widget-setting name='text-7'>youtube</b:widget-setting>
-  <b:widget-setting name='text-6'>instagram</b:widget-setting>
-  <b:widget-setting name='sorting'>NONE</b:widget-setting>
-  <b:widget-setting name='link-1'>#</b:widget-setting>
-  <b:widget-setting name='link-2'>#</b:widget-setting>
-  <b:widget-setting name='link-0'>http://fb.com/soratemplates</b:widget-setting>
-</b:widget-settings>
-<b:includable id='main'>
+  <b:widget id='LinkList75' locked='true' title='Social Plugin' type='LinkList' version='2' visible='false'>
+    <b:widget-settings>
+      <b:widget-setting name='text-9'>rss</b:widget-setting>
+      <b:widget-setting name='link-9'>#</b:widget-setting>
+      <b:widget-setting name='text-8'>whatsapp</b:widget-setting>
+      <b:widget-setting name='link-7'>#</b:widget-setting>
+      <b:widget-setting name='link-8'>#</b:widget-setting>
+      <b:widget-setting name='link-5'>#</b:widget-setting>
+      <b:widget-setting name='link-6'>#</b:widget-setting>
+      <b:widget-setting name='link-3'>#</b:widget-setting>
+      <b:widget-setting name='link-4'>#</b:widget-setting>
+      <b:widget-setting name='text-1'>twitter</b:widget-setting>
+      <b:widget-setting name='text-0'>facebook</b:widget-setting>
+      <b:widget-setting name='text-3'>reddit</b:widget-setting>
+      <b:widget-setting name='text-2'>linkedin</b:widget-setting>
+      <b:widget-setting name='text-5'>vk</b:widget-setting>
+      <b:widget-setting name='text-4'>pinterest</b:widget-setting>
+      <b:widget-setting name='text-7'>youtube</b:widget-setting>
+      <b:widget-setting name='text-6'>instagram</b:widget-setting>
+      <b:widget-setting name='sorting'>NONE</b:widget-setting>
+      <b:widget-setting name='link-1'>#</b:widget-setting>
+      <b:widget-setting name='link-2'>#</b:widget-setting>
+      <b:widget-setting name='link-0'>http://fb.com/soratemplates</b:widget-setting>
+    </b:widget-settings>
+    <b:includable id='main'>
   <b:include name='widget-title'/>
   <b:include name='content'/>
 </b:includable>
-<b:includable id='content'>
+    <b:includable id='content'>
   <div class='widget-content'>
     <ul class='social-counter social social-color'>
       <b:loop values='data:links' var='link'>
@@ -4614,15 +4609,15 @@ x-)</div>
     </ul>
   </div>
 </b:includable>
-</b:widget>
+  </b:widget>
 </b:section>
 <b:section class='sidebar common-widget' id='sidebar1' name='Sidebar Right' showaddelement='yes'>
-<b:widget id='BlogSearch1' locked='false' title='글 검색' type='BlogSearch' visible='true'>
-<b:includable id='main' var='this'>
+  <b:widget id='BlogSearch1' locked='false' title='글 검색' type='BlogSearch' version='2' visible='true'>
+    <b:includable id='main' var='this'>
   <b:include name='widget-title'/>
   <b:include name='content'/>
 </b:includable>
-<b:includable id='content'>
+    <b:includable id='content'>
   <div class='widget-content' role='search'>
     <form class='search-form' expr:action='data:blog.searchUrl'>
       <b:attr cond='not data:view.isPreview' name='target' value='_top'/>
@@ -4632,7 +4627,7 @@ x-)</div>
     </form>
   </div>
 </b:includable>
-<b:includable id='searchForm'>
+    <b:includable id='searchForm'>
   <form expr:action='data:blog.searchUrl'>
     <b:attr cond='not data:view.isPreview' name='target' value='_top'/>
     <b:include name='urlParamsAsFormInput'/>
@@ -4642,18 +4637,18 @@ x-)</div>
     <b:include name='searchSubmit'/>
   </form>
 </b:includable>
-<b:includable id='searchSubmit'>
+    <b:includable id='searchSubmit'>
   <input class='search-action' expr:value='data:messages.search.escaped' type='submit'/>
 </b:includable>
-</b:widget>
-<b:widget id='PopularPosts1' locked='false' title='인기글' type='PopularPosts' visible='true'>
-<b:widget-settings>
-  <b:widget-setting name='numItemsToShow'>6</b:widget-setting>
-  <b:widget-setting name='showThumbnails'>true</b:widget-setting>
-  <b:widget-setting name='showSnippets'>true</b:widget-setting>
-  <b:widget-setting name='timeRange'>LAST_MONTH</b:widget-setting>
-</b:widget-settings>
-<b:includable id='main' var='this'>
+  </b:widget>
+  <b:widget id='PopularPosts1' locked='false' title='인기글' type='PopularPosts' version='2' visible='true'>
+    <b:widget-settings>
+      <b:widget-setting name='numItemsToShow'>6</b:widget-setting>
+      <b:widget-setting name='showThumbnails'>true</b:widget-setting>
+      <b:widget-setting name='showSnippets'>true</b:widget-setting>
+      <b:widget-setting name='timeRange'>LAST_MONTH</b:widget-setting>
+    </b:widget-settings>
+    <b:includable id='main' var='this'>
   <b:include name='widget-title'/>
   <div class='widget-content'>
     <b:loop values='data:posts' var='post'>
@@ -4661,7 +4656,7 @@ x-)</div>
     </b:loop>
   </div>
 </b:includable>
-<b:includable id='postContent' var='post'>
+    <b:includable id='postContent' var='post'>
   <div class='post'>
     <div class='post-content'>
       <a class='post-image-link' expr:href='data:post.url'>
@@ -4681,18 +4676,18 @@ x-)</div>
     </div>
   </div>
 </b:includable>
-</b:widget>
-<b:widget id='AdSense10' locked='false' title='' type='AdSense' visible='true'>
-<b:widget-settings>
-  <b:widget-setting name='style.bgcolor'>#ffffff</b:widget-setting>
-  <b:widget-setting name='style.textcolor'>#000000</b:widget-setting>
-  <b:widget-setting name='style.layout'>300x250</b:widget-setting>
-  <b:widget-setting name='style.bordercolor'>#ffffff</b:widget-setting>
-  <b:widget-setting name='style.urlcolor'>#008000</b:widget-setting>
-  <b:widget-setting name='style.linkcolor'>#0000ff</b:widget-setting>
-  <b:widget-setting name='style.unittype'>TextAndImage</b:widget-setting>
-</b:widget-settings>
-<b:includable id='main'>
+  </b:widget>
+  <b:widget id='AdSense10' locked='false' title='' type='AdSense' version='2' visible='true'>
+    <b:widget-settings>
+      <b:widget-setting name='style.bgcolor'>#ffffff</b:widget-setting>
+      <b:widget-setting name='style.textcolor'>#000000</b:widget-setting>
+      <b:widget-setting name='style.layout'>300x250</b:widget-setting>
+      <b:widget-setting name='style.bordercolor'>#ffffff</b:widget-setting>
+      <b:widget-setting name='style.urlcolor'>#008000</b:widget-setting>
+      <b:widget-setting name='style.linkcolor'>#0000ff</b:widget-setting>
+      <b:widget-setting name='style.unittype'>TextAndImage</b:widget-setting>
+    </b:widget-settings>
+    <b:includable id='main'>
   <div class='widget-content'>
     <b:if cond='data:adCode'>
       <data:adCode/>
@@ -4701,15 +4696,15 @@ x-)</div>
     </b:if>
   </div>
 </b:includable>
-</b:widget>
-<b:widget id='PopularPosts2' locked='false' title='가장 많이 본 글' type='PopularPosts' visible='false'>
-<b:widget-settings>
-  <b:widget-setting name='numItemsToShow'>10</b:widget-setting>
-  <b:widget-setting name='showThumbnails'>true</b:widget-setting>
-  <b:widget-setting name='showSnippets'>true</b:widget-setting>
-  <b:widget-setting name='timeRange'>ALL_TIME</b:widget-setting>
-</b:widget-settings>
-<b:includable id='main' var='this'>
+  </b:widget>
+  <b:widget id='PopularPosts2' locked='false' title='가장 많이 본 글' type='PopularPosts' version='2' visible='false'>
+    <b:widget-settings>
+      <b:widget-setting name='numItemsToShow'>10</b:widget-setting>
+      <b:widget-setting name='showThumbnails'>true</b:widget-setting>
+      <b:widget-setting name='showSnippets'>true</b:widget-setting>
+      <b:widget-setting name='timeRange'>ALL_TIME</b:widget-setting>
+    </b:widget-settings>
+    <b:includable id='main' var='this'>
   <b:include name='widget-title'/>
   <div class='widget-content'>
     <b:loop values='data:posts' var='post'>
@@ -4717,7 +4712,7 @@ x-)</div>
     </b:loop>
   </div>
 </b:includable>
-<b:includable id='postContent' var='post'>
+    <b:includable id='postContent' var='post'>
   <div class='post'>
     <div class='post-content'>
       <a class='post-image-link' expr:href='data:post.url'>
@@ -4737,72 +4732,20 @@ x-)</div>
     </div>
   </div>
 </b:includable>
-</b:widget>
-<b:widget id='PageList1' locked='false' title='플러그인들' type='PageList' visible='true'>
-<b:widget-settings>
-  <b:widget-setting name='pageListJson'><![CDATA[{'1892020831031345552': {'href': 'http://frontend.diffthink.kr/p/validation-jquery.html', 'title': '{ jQuery } Validation', 'position': 0}, '783320246300567741': {'href': 'http://frontend.diffthink.kr/p/image-tool-jquery.html', 'title': '{ jQuery } Image Tool ', 'position': 1}, '4234285249113230552': {'href': 'http://frontend.diffthink.kr/p/modal-jquery.html', 'title': '{ jQuery } Modal', 'position': 2}, '629204568709577051': {'href': 'http://frontend.diffthink.kr/p/datetime-jquery.html', 'title': '{ jQuery } DateTime ', 'position': 3}, '8220307779481232686': {'href': 'http://frontend.diffthink.kr/p/jquery.html', 'title': '{ jQuery } Search Box', 'position': 4}, '8825193437026499540': {'href': 'http://frontend.diffthink.kr/p/page-handler-jquery.html', 'title': '{ jQuery } Page Handler', 'position': 5}, '961405233096996403': {'href': 'http://frontend.diffthink.kr/p/video-audio-jquery.html', 'title': '{ jQuery } Video \x26amp; Audio', 'position': 6}, '6574391731594492424': {'href': 'http://frontend.diffthink.kr/p/table-jquery.html', 'title': '{ jQuery } Table ', 'position': 7}, '7330119585050485295': {'href': 'http://frontend.diffthink.kr/p/chart-jquery.html', 'title': '{ jQuery } Data Visualization ', 'position': 8}, '4927018082549610118': {'href': 'http://frontend.diffthink.kr/p/image-effect-jquery.html', 'title': '{ jQuery } Image Effect', 'position': 9}, '1542696986997889637': {'href': 'http://frontend.diffthink.kr/p/timeline-jquery.html', 'title': '{ jQuery } Timeline', 'position': 10}, '9001987756939810880': {'href': 'http://frontend.diffthink.kr/p/form-handler-jquery.html', 'title': '{ jQuery } Form Handler', 'position': 11}, '6547745186415395266': {'href': 'http://frontend.diffthink.kr/p/jquery-text-effect-httpsmntn-dev.html', 'title': '{ jQuery } Text Effect', 'position': 12}, '6280818027065435677': {'href': 'http://frontend.diffthink.kr/p/jquery-menu-slinky-li.html', 'title': '{ jQuery } Menu ', 'position': 13}, '1244135623326113250': {'href': 'http://frontend.diffthink.kr/p/motion-controll-jquery-jquery-easing.html', 'title': '{ jQuery } Motion Controll ', 'position': 14}, '1903837925785646358': {'href': 'http://frontend.diffthink.kr/p/slider-jquery.html', 'title': '{ jQuery } Slider ', 'position': 15}, '3891804750439504296': {'href': 'http://frontend.diffthink.kr/p/grid-handler-jquery.html', 'title': '{ jQuery } Grid Handler ', 'position': 16}, '4484627272922218374': {'href': 'http://frontend.diffthink.kr/p/custom-scroll-jquery.html', 'title': '{ jQuery } Custom Scroll ', 'position': 17}}]]></b:widget-setting>
-  <b:widget-setting name='homeTitle'>홈</b:widget-setting>
-</b:widget-settings>
-<b:includable id='main'>
+  </b:widget>
+  <b:widget id='Label3' locked='false' title='카테고리' type='Label' version='2' visible='true'>
+    <b:widget-settings>
+      <b:widget-setting name='sorting'>ALPHA</b:widget-setting>
+      <b:widget-setting name='display'>LIST</b:widget-setting>
+      <b:widget-setting name='selectedLabelsList'>Javascript-api,Nodejs,amp,angular 1.x,angular 2.x,angularJS,javascript,javascript-es6,javascript-event,javascript-mobile,javascript-utility,jquery,python,python-django,scss,stylesheet,tip,tutorial,typescript,vue,vue2.x,정규식,책소개</b:widget-setting>
+      <b:widget-setting name='showType'>USER_SELECTED</b:widget-setting>
+      <b:widget-setting name='showFreqNumbers'>true</b:widget-setting>
+    </b:widget-settings>
+    <b:includable id='main' var='this'>
   <b:include name='widget-title'/>
   <b:include name='content'/>
 </b:includable>
-<b:includable id='content'>
-  <div class='widget-content'>
-    <b:include name='pageList'/>
-  </div>
-</b:includable>
-<b:includable id='overflowButton'>
-  <b:include name='verticalMoreIcon'/>
-</b:includable>
-<b:includable id='overflowablePageList'>
-  <div class='overflowable-container'>
-    <div class='overflowable-contents'>
-      <div class='container'>
-        <b:with value='true' var='overflow'>
-          <b:with value='&quot;tabs&quot;' var='pageListClass'>
-            <b:include name='pageList'/>
-          </b:with>
-        </b:with>
-      </div>
-    </div>
-    <div class='overflow-button hidden'>
-      <b:include name='overflowButton'/>
-    </div>
-  </div>
-</b:includable>
-<b:includable id='pageLink'>
-  <li>
-    <b:class cond='data:overflow' name='overflowable-item'/>
-    <b:class cond='data:link.isCurrentPage' name='selected'/>
-
-    <a expr:href='data:link.href'>
-      <data:link.title/>
-    </a>
-  </li>
-</b:includable>
-<b:includable id='pageList'>
-  <ul>
-    <b:class cond='data:pageListClass' expr:name='data:pageListClass'/>
-    <b:loop values='data:links' var='link'>
-      <b:include name='pageLink'/>
-    </b:loop>
-  </ul>
-</b:includable>
-</b:widget>
-<b:widget id='Label3' locked='false' title='카테고리' type='Label' version='2' visible='true'>
-<b:widget-settings>
-  <b:widget-setting name='sorting'>ALPHA</b:widget-setting>
-  <b:widget-setting name='display'>LIST</b:widget-setting>
-  <b:widget-setting name='selectedLabelsList'>Javascript-api,Nodejs,amp,angular 1.x,angular 2.x,angularJS,javascript,javascript-es6,javascript-event,javascript-mobile,javascript-utility,jquery,python,python-django,scss,stylesheet,tip,tutorial,typescript,vue,vue2.x,정규식,책소개</b:widget-setting>
-  <b:widget-setting name='showType'>USER_SELECTED</b:widget-setting>
-  <b:widget-setting name='showFreqNumbers'>true</b:widget-setting>
-</b:widget-settings>
-<b:includable id='main' var='this'>
-  <b:include name='widget-title'/>
-  <b:include name='content'/>
-</b:includable>
-<b:includable id='cloud'>
+    <b:includable id='cloud'>
   <b:loop values='data:labels' var='label'>
     <span class='label-size'>
       <b:class expr:name='&quot;label-size-&quot; + data:label.cssSize'/>
@@ -4816,14 +4759,14 @@ x-)</div>
     </span>
   </b:loop>
 </b:includable>
-<b:includable id='content'>
+    <b:includable id='content'>
   <div class='widget-content'>
     <b:class expr:name='data:this.display + &quot;-label&quot;'/>
     <b:include cond='data:this.display == &quot;list&quot;' name='list'/>
     <b:include cond='data:this.display == &quot;cloud&quot;' name='list'/>
   </div>
 </b:includable>
-<b:includable id='list'>
+    <b:includable id='list'>
   <ul>
     <b:loop values='data:labels' var='label'>
       <li>
@@ -4838,18 +4781,18 @@ x-)</div>
     </b:loop>
   </ul>
 </b:includable>
-</b:widget>
-<b:widget id='AdSense11' locked='false' title='' type='AdSense' visible='true'>
-<b:widget-settings>
-  <b:widget-setting name='style.bgcolor'>#ffffff</b:widget-setting>
-  <b:widget-setting name='style.textcolor'>#000000</b:widget-setting>
-  <b:widget-setting name='style.layout'>300x250</b:widget-setting>
-  <b:widget-setting name='style.bordercolor'>#ffffff</b:widget-setting>
-  <b:widget-setting name='style.urlcolor'>#008000</b:widget-setting>
-  <b:widget-setting name='style.linkcolor'>#0000ff</b:widget-setting>
-  <b:widget-setting name='style.unittype'>TextAndImage</b:widget-setting>
-</b:widget-settings>
-<b:includable id='main'>
+  </b:widget>
+  <b:widget id='AdSense11' locked='false' title='' type='AdSense' version='2' visible='true'>
+    <b:widget-settings>
+      <b:widget-setting name='style.bgcolor'>#ffffff</b:widget-setting>
+      <b:widget-setting name='style.textcolor'>#000000</b:widget-setting>
+      <b:widget-setting name='style.layout'>300x250</b:widget-setting>
+      <b:widget-setting name='style.bordercolor'>#ffffff</b:widget-setting>
+      <b:widget-setting name='style.urlcolor'>#008000</b:widget-setting>
+      <b:widget-setting name='style.linkcolor'>#0000ff</b:widget-setting>
+      <b:widget-setting name='style.unittype'>TextAndImage</b:widget-setting>
+    </b:widget-settings>
+    <b:includable id='main'>
   <div class='widget-content'>
     <b:if cond='data:adCode'>
       <data:adCode/>
@@ -4858,24 +4801,24 @@ x-)</div>
     </b:if>
   </div>
 </b:includable>
-</b:widget>
-<b:widget id='BlogArchive1' locked='false' title='게시글' type='BlogArchive' visible='false'>
-<b:widget-settings>
-  <b:widget-setting name='showStyle'>HIERARCHY</b:widget-setting>
-  <b:widget-setting name='yearPattern'>yyyy</b:widget-setting>
-  <b:widget-setting name='showWeekEnd'>true</b:widget-setting>
-  <b:widget-setting name='monthPattern'>MMMM</b:widget-setting>
-  <b:widget-setting name='dayPattern'>MMM dd</b:widget-setting>
-  <b:widget-setting name='weekPattern'>M/d</b:widget-setting>
-  <b:widget-setting name='chronological'>true</b:widget-setting>
-  <b:widget-setting name='showPosts'>true</b:widget-setting>
-  <b:widget-setting name='frequency'>MONTHLY</b:widget-setting>
-</b:widget-settings>
-<b:includable id='main' var='this'>
+  </b:widget>
+  <b:widget id='BlogArchive1' locked='false' title='게시글' type='BlogArchive' version='2' visible='false'>
+    <b:widget-settings>
+      <b:widget-setting name='showStyle'>HIERARCHY</b:widget-setting>
+      <b:widget-setting name='yearPattern'>yyyy</b:widget-setting>
+      <b:widget-setting name='showWeekEnd'>true</b:widget-setting>
+      <b:widget-setting name='monthPattern'>MMMM</b:widget-setting>
+      <b:widget-setting name='dayPattern'>MMM dd</b:widget-setting>
+      <b:widget-setting name='weekPattern'>M/d</b:widget-setting>
+      <b:widget-setting name='chronological'>true</b:widget-setting>
+      <b:widget-setting name='showPosts'>true</b:widget-setting>
+      <b:widget-setting name='frequency'>MONTHLY</b:widget-setting>
+    </b:widget-settings>
+    <b:includable id='main' var='this'>
   <b:include name='widget-title'/>
   <b:include name='content'/>
 </b:includable>
-<b:includable id='content'>
+    <b:includable id='content'>
   <div class='widget-content'>
     <div id='ArchiveList'>
       <div expr:id='data:widget.instanceId + &quot;_ArchiveList&quot;'>
@@ -4884,7 +4827,7 @@ x-)</div>
     </div>
   </div>
 </b:includable>
-<b:includable id='flat'>
+    <b:includable id='flat'>
   <ul class='flat'>
     <b:loop values='data:data' var='i'>
       <li class='archivedate'>
@@ -4898,10 +4841,10 @@ x-)</div>
     </b:loop>
   </ul>
 </b:includable>
-<b:includable id='hierarchy'>
+    <b:includable id='hierarchy'>
   <b:include data='data' name='interval'/>
 </b:includable>
-<b:includable id='interval' var='intervals'>
+    <b:includable id='interval' var='intervals'>
   <ul class='hierarchy'>
     <b:loop values='data:intervals' var='interval'>
       <li class='archivedate'>
@@ -4921,7 +4864,7 @@ x-)</div>
     </b:loop>
   </ul>
 </b:includable>
-<b:includable id='posts' var='posts'>
+    <b:includable id='posts' var='posts'>
   <ul class='posts hierarchy'>
     <b:loop values='data:posts' var='post'>
       <li>
@@ -4932,18 +4875,18 @@ x-)</div>
     </b:loop>
   </ul>
 </b:includable>
-</b:widget>
-<b:widget id='AdSense1' locked='false' title='' type='AdSense' visible='true'>
-<b:widget-settings>
-  <b:widget-setting name='style.bgcolor'>#ffffff</b:widget-setting>
-  <b:widget-setting name='style.textcolor'>#000000</b:widget-setting>
-  <b:widget-setting name='style.layout'>300x250</b:widget-setting>
-  <b:widget-setting name='style.bordercolor'>#ffffff</b:widget-setting>
-  <b:widget-setting name='style.urlcolor'>#1f2024</b:widget-setting>
-  <b:widget-setting name='style.linkcolor'>#4a4a4a</b:widget-setting>
-  <b:widget-setting name='style.unittype'>TextAndImage</b:widget-setting>
-</b:widget-settings>
-<b:includable id='main'>
+  </b:widget>
+  <b:widget id='AdSense1' locked='false' title='' type='AdSense' version='2' visible='true'>
+    <b:widget-settings>
+      <b:widget-setting name='style.bgcolor'>#ffffff</b:widget-setting>
+      <b:widget-setting name='style.textcolor'>#000000</b:widget-setting>
+      <b:widget-setting name='style.layout'>300x250</b:widget-setting>
+      <b:widget-setting name='style.bordercolor'>#ffffff</b:widget-setting>
+      <b:widget-setting name='style.urlcolor'>#1f2024</b:widget-setting>
+      <b:widget-setting name='style.linkcolor'>#4a4a4a</b:widget-setting>
+      <b:widget-setting name='style.unittype'>TextAndImage</b:widget-setting>
+    </b:widget-settings>
+    <b:includable id='main'>
   <div class='widget-content'>
     <b:if cond='data:adCode'>
       <data:adCode/>
@@ -4952,18 +4895,18 @@ x-)</div>
     </b:if>
   </div>
 </b:includable>
-</b:widget>
-<b:widget id='AdSense2' locked='false' title='' type='AdSense' visible='true'>
-<b:widget-settings>
-  <b:widget-setting name='style.bgcolor'>#ffffff</b:widget-setting>
-  <b:widget-setting name='style.textcolor'>#000000</b:widget-setting>
-  <b:widget-setting name='style.layout'>1x1</b:widget-setting>
-  <b:widget-setting name='style.bordercolor'>#ffffff</b:widget-setting>
-  <b:widget-setting name='style.urlcolor'>#008000</b:widget-setting>
-  <b:widget-setting name='style.linkcolor'>#0000ff</b:widget-setting>
-  <b:widget-setting name='style.unittype'>TextAndImage</b:widget-setting>
-</b:widget-settings>
-<b:includable id='main'>
+  </b:widget>
+  <b:widget id='AdSense2' locked='false' title='' type='AdSense' version='2' visible='true'>
+    <b:widget-settings>
+      <b:widget-setting name='style.bgcolor'>#ffffff</b:widget-setting>
+      <b:widget-setting name='style.textcolor'>#000000</b:widget-setting>
+      <b:widget-setting name='style.layout'>1x1</b:widget-setting>
+      <b:widget-setting name='style.bordercolor'>#ffffff</b:widget-setting>
+      <b:widget-setting name='style.urlcolor'>#008000</b:widget-setting>
+      <b:widget-setting name='style.linkcolor'>#0000ff</b:widget-setting>
+      <b:widget-setting name='style.unittype'>TextAndImage</b:widget-setting>
+    </b:widget-settings>
+    <b:includable id='main'>
   <div class='widget-content'>
     <b:if cond='data:adCode'>
       <data:adCode/>
@@ -4972,22 +4915,22 @@ x-)</div>
     </b:if>
   </div>
 </b:includable>
-</b:widget>
-<b:widget id='HTML1' locked='false' title='Ads Inside Post' type='HTML' version='1'>
-<b:widget-settings>
-  <b:widget-setting name='content'/>
-</b:widget-settings>
-<b:includable id='main'>
+  </b:widget>
+  <b:widget id='HTML1' locked='false' title='Ads Inside Post' type='HTML' version='1'>
+    <b:widget-settings>
+      <b:widget-setting name='content'/>
+    </b:widget-settings>
+    <b:includable id='main'>
   <div class='ads-in-post'>
     <data:content/>
   </div>
 </b:includable>
-</b:widget>
-<b:widget id='FollowByEmail1' locked='false' title='Follow by Email' type='FollowByEmail' visible='true'>
-<b:includable id='main' var='this'>
+  </b:widget>
+  <b:widget id='FollowByEmail1' locked='false' title='Follow by Email' type='FollowByEmail' version='2' visible='true'>
+    <b:includable id='main' var='this'>
   <b:include name='content'/>
 </b:includable>
-<b:includable id='content'>
+    <b:includable id='content'>
   <div class='widget-content'>
     <b:if cond='data:defaultTitle or data:title'>
       <h3 class='title'>
@@ -5007,31 +4950,31 @@ x-)</div>
     </div>
   </div>
 </b:includable>
-</b:widget>
-<b:widget id='HTML6' locked='false' title='Facebook' type='HTML' visible='false'>
-<b:widget-settings>
-  <b:widget-setting name='content'><![CDATA[<center><div class="fb-page" data-href="https://www.facebook.com/templatesyard" data-width="360" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"></div></center>]]></b:widget-setting>
-</b:widget-settings>
-<b:includable id='main'>
+  </b:widget>
+  <b:widget id='HTML6' locked='false' title='Facebook' type='HTML' visible='false'>
+    <b:widget-settings>
+      <b:widget-setting name='content'><![CDATA[<center><div class="fb-page" data-href="https://www.facebook.com/templatesyard" data-width="360" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"></div></center>]]></b:widget-setting>
+    </b:widget-settings>
+    <b:includable id='main'>
   <b:include name='widget-title'/>
   <div class='widget-content'>
     <data:content/>
   </div>
 </b:includable>
-</b:widget>
-<b:widget id='Label4' locked='false' title='Tags' type='Label' version='2' visible='false'>
-<b:widget-settings>
-  <b:widget-setting name='sorting'>FREQUENCY</b:widget-setting>
-  <b:widget-setting name='display'>CLOUD</b:widget-setting>
-  <b:widget-setting name='selectedLabelsList'>Beauty,Business,Fashion,Learn,Music,Nature,People,Photography,Sports,Technology</b:widget-setting>
-  <b:widget-setting name='showType'>ALL</b:widget-setting>
-  <b:widget-setting name='showFreqNumbers'>false</b:widget-setting>
-</b:widget-settings>
-<b:includable id='main' var='this'>
+  </b:widget>
+  <b:widget id='Label4' locked='false' title='Tags' type='Label' version='2' visible='false'>
+    <b:widget-settings>
+      <b:widget-setting name='sorting'>FREQUENCY</b:widget-setting>
+      <b:widget-setting name='display'>CLOUD</b:widget-setting>
+      <b:widget-setting name='selectedLabelsList'>Beauty,Business,Fashion,Learn,Music,Nature,People,Photography,Sports,Technology</b:widget-setting>
+      <b:widget-setting name='showType'>ALL</b:widget-setting>
+      <b:widget-setting name='showFreqNumbers'>false</b:widget-setting>
+    </b:widget-settings>
+    <b:includable id='main' var='this'>
   <b:include name='widget-title'/>
   <b:include name='content'/>
 </b:includable>
-<b:includable id='cloud'>
+    <b:includable id='cloud'>
   <b:loop values='data:labels' var='label'>
     <span class='label-size'>
       <b:class expr:name='&quot;label-size-&quot; + data:label.cssSize'/>
@@ -5045,14 +4988,14 @@ x-)</div>
     </span>
   </b:loop>
 </b:includable>
-<b:includable id='content'>
+    <b:includable id='content'>
   <div class='widget-content'>
     <b:class expr:name='data:this.display + &quot;-label&quot;'/>
     <b:include cond='data:this.display == &quot;list&quot;' name='list'/>
     <b:include cond='data:this.display == &quot;cloud&quot;' name='list'/>
   </div>
 </b:includable>
-<b:includable id='list'>
+    <b:includable id='list'>
   <ul>
     <b:loop values='data:labels' var='label'>
       <li>
@@ -5067,18 +5010,18 @@ x-)</div>
     </b:loop>
   </ul>
 </b:includable>
-</b:widget>
-<b:widget id='AdSense4' locked='false' title='' type='AdSense' visible='false'>
-<b:widget-settings>
-  <b:widget-setting name='style.bgcolor'>#ffffff</b:widget-setting>
-  <b:widget-setting name='style.textcolor'>#000000</b:widget-setting>
-  <b:widget-setting name='style.layout'>250x250</b:widget-setting>
-  <b:widget-setting name='style.bordercolor'>#ffffff</b:widget-setting>
-  <b:widget-setting name='style.urlcolor'>#008000</b:widget-setting>
-  <b:widget-setting name='style.linkcolor'>#0000ff</b:widget-setting>
-  <b:widget-setting name='style.unittype'>TextAndImage</b:widget-setting>
-</b:widget-settings>
-<b:includable id='main'>
+  </b:widget>
+  <b:widget id='AdSense4' locked='false' title='' type='AdSense' version='2' visible='false'>
+    <b:widget-settings>
+      <b:widget-setting name='style.bgcolor'>#ffffff</b:widget-setting>
+      <b:widget-setting name='style.textcolor'>#000000</b:widget-setting>
+      <b:widget-setting name='style.layout'>250x250</b:widget-setting>
+      <b:widget-setting name='style.bordercolor'>#ffffff</b:widget-setting>
+      <b:widget-setting name='style.urlcolor'>#008000</b:widget-setting>
+      <b:widget-setting name='style.linkcolor'>#0000ff</b:widget-setting>
+      <b:widget-setting name='style.unittype'>TextAndImage</b:widget-setting>
+    </b:widget-settings>
+    <b:includable id='main'>
   <div class='widget-content'>
     <b:if cond='data:adCode'>
       <data:adCode/>
@@ -5087,18 +5030,18 @@ x-)</div>
     </b:if>
   </div>
 </b:includable>
-</b:widget>
-<b:widget id='AdSense5' locked='false' title='' type='AdSense' visible='false'>
-<b:widget-settings>
-  <b:widget-setting name='style.bgcolor'>#ffffff</b:widget-setting>
-  <b:widget-setting name='style.textcolor'>#000000</b:widget-setting>
-  <b:widget-setting name='style.layout'>250x250</b:widget-setting>
-  <b:widget-setting name='style.bordercolor'>#ffffff</b:widget-setting>
-  <b:widget-setting name='style.urlcolor'>#008000</b:widget-setting>
-  <b:widget-setting name='style.linkcolor'>#0000ff</b:widget-setting>
-  <b:widget-setting name='style.unittype'>TextAndImage</b:widget-setting>
-</b:widget-settings>
-<b:includable id='main'>
+  </b:widget>
+  <b:widget id='AdSense5' locked='false' title='' type='AdSense' version='2' visible='false'>
+    <b:widget-settings>
+      <b:widget-setting name='style.bgcolor'>#ffffff</b:widget-setting>
+      <b:widget-setting name='style.textcolor'>#000000</b:widget-setting>
+      <b:widget-setting name='style.layout'>250x250</b:widget-setting>
+      <b:widget-setting name='style.bordercolor'>#ffffff</b:widget-setting>
+      <b:widget-setting name='style.urlcolor'>#008000</b:widget-setting>
+      <b:widget-setting name='style.linkcolor'>#0000ff</b:widget-setting>
+      <b:widget-setting name='style.unittype'>TextAndImage</b:widget-setting>
+    </b:widget-settings>
+    <b:includable id='main'>
   <div class='widget-content'>
     <b:if cond='data:adCode'>
       <data:adCode/>
@@ -5107,20 +5050,20 @@ x-)</div>
     </b:if>
   </div>
 </b:includable>
-</b:widget>
-<b:widget id='Label2' locked='false' title='카테고리' type='Label' visible='false'>
-<b:widget-settings>
-  <b:widget-setting name='sorting'>ALPHA</b:widget-setting>
-  <b:widget-setting name='display'>LIST</b:widget-setting>
-  <b:widget-setting name='selectedLabelsList'>API,DOCS,Editor,Javascript-api,Nodejs,angular 1.x,angular 2.x,git,javascript,javascript pattern,javascript-es6,javascript-mobile,javascript-utility,jquery-api,python,python-django,sql,stylesheet,tip,typescript,vue,데이터시각화,자바스크립트 기본문법,자바스크립트 단위 테스트,자바스크립트 이벤트,정규식</b:widget-setting>
-  <b:widget-setting name='showType'>USER_SELECTED</b:widget-setting>
-  <b:widget-setting name='showFreqNumbers'>true</b:widget-setting>
-</b:widget-settings>
-<b:includable id='main' var='this'>
+  </b:widget>
+  <b:widget id='Label2' locked='false' title='카테고리' type='Label' version='2' visible='false'>
+    <b:widget-settings>
+      <b:widget-setting name='sorting'>ALPHA</b:widget-setting>
+      <b:widget-setting name='display'>LIST</b:widget-setting>
+      <b:widget-setting name='selectedLabelsList'>API,DOCS,Editor,Javascript-api,Nodejs,angular 1.x,angular 2.x,git,javascript,javascript pattern,javascript-es6,javascript-mobile,javascript-utility,jquery-api,python,python-django,sql,stylesheet,tip,typescript,vue,데이터시각화,자바스크립트 기본문법,자바스크립트 단위 테스트,자바스크립트 이벤트,정규식</b:widget-setting>
+      <b:widget-setting name='showType'>USER_SELECTED</b:widget-setting>
+      <b:widget-setting name='showFreqNumbers'>true</b:widget-setting>
+    </b:widget-settings>
+    <b:includable id='main' var='this'>
   <b:include name='widget-title'/>
   <b:include name='content'/>
 </b:includable>
-<b:includable id='cloud'>
+    <b:includable id='cloud'>
   <b:loop values='data:labels' var='label'>
     <span class='label-size'>
       <b:class expr:name='&quot;label-size-&quot; + data:label.cssSize'/>
@@ -5135,14 +5078,14 @@ x-)</div>
     </span>
   </b:loop>
 </b:includable>
-<b:includable id='content'>
+    <b:includable id='content'>
   <div class='widget-content'>
     <b:class expr:name='data:this.display + &quot;-label&quot;'/>
     <b:include cond='data:this.display == &quot;list&quot;' name='list'/>
     <b:include cond='data:this.display == &quot;cloud&quot;' name='list'/>
   </div>
 </b:includable>
-<b:includable id='list'>
+    <b:includable id='list'>
   <ul>
     <b:loop values='data:labels' var='label'>
       <li>
@@ -5157,18 +5100,18 @@ x-)</div>
     </b:loop>
   </ul>
 </b:includable>
-</b:widget>
-<b:widget id='AdSense6' locked='false' title='' type='AdSense' visible='false'>
-<b:widget-settings>
-  <b:widget-setting name='style.bgcolor'>#ffffff</b:widget-setting>
-  <b:widget-setting name='style.textcolor'>#000000</b:widget-setting>
-  <b:widget-setting name='style.layout'>250x250</b:widget-setting>
-  <b:widget-setting name='style.bordercolor'>#ffffff</b:widget-setting>
-  <b:widget-setting name='style.urlcolor'>#008000</b:widget-setting>
-  <b:widget-setting name='style.linkcolor'>#0000ff</b:widget-setting>
-  <b:widget-setting name='style.unittype'>TextAndImage</b:widget-setting>
-</b:widget-settings>
-<b:includable id='main'>
+  </b:widget>
+  <b:widget id='AdSense6' locked='false' title='' type='AdSense' version='2' visible='false'>
+    <b:widget-settings>
+      <b:widget-setting name='style.bgcolor'>#ffffff</b:widget-setting>
+      <b:widget-setting name='style.textcolor'>#000000</b:widget-setting>
+      <b:widget-setting name='style.layout'>250x250</b:widget-setting>
+      <b:widget-setting name='style.bordercolor'>#ffffff</b:widget-setting>
+      <b:widget-setting name='style.urlcolor'>#008000</b:widget-setting>
+      <b:widget-setting name='style.linkcolor'>#0000ff</b:widget-setting>
+      <b:widget-setting name='style.unittype'>TextAndImage</b:widget-setting>
+    </b:widget-settings>
+    <b:includable id='main'>
   <div class='widget-content'>
     <b:if cond='data:adCode'>
       <data:adCode/>
@@ -5177,18 +5120,18 @@ x-)</div>
     </b:if>
   </div>
 </b:includable>
-</b:widget>
-<b:widget id='AdSense7' locked='false' title='' type='AdSense' visible='false'>
-<b:widget-settings>
-  <b:widget-setting name='style.bgcolor'>#ffffff</b:widget-setting>
-  <b:widget-setting name='style.textcolor'>#000000</b:widget-setting>
-  <b:widget-setting name='style.layout'>970x90</b:widget-setting>
-  <b:widget-setting name='style.bordercolor'>#ffffff</b:widget-setting>
-  <b:widget-setting name='style.urlcolor'>#008000</b:widget-setting>
-  <b:widget-setting name='style.linkcolor'>#0000ff</b:widget-setting>
-  <b:widget-setting name='style.unittype'>TextAndImage</b:widget-setting>
-</b:widget-settings>
-<b:includable id='main'>
+  </b:widget>
+  <b:widget id='AdSense7' locked='false' title='' type='AdSense' version='2' visible='false'>
+    <b:widget-settings>
+      <b:widget-setting name='style.bgcolor'>#ffffff</b:widget-setting>
+      <b:widget-setting name='style.textcolor'>#000000</b:widget-setting>
+      <b:widget-setting name='style.layout'>970x90</b:widget-setting>
+      <b:widget-setting name='style.bordercolor'>#ffffff</b:widget-setting>
+      <b:widget-setting name='style.urlcolor'>#008000</b:widget-setting>
+      <b:widget-setting name='style.linkcolor'>#0000ff</b:widget-setting>
+      <b:widget-setting name='style.unittype'>TextAndImage</b:widget-setting>
+    </b:widget-settings>
+    <b:includable id='main'>
   <div class='widget-content'>
     <b:if cond='data:adCode'>
       <data:adCode/>
@@ -5197,18 +5140,18 @@ x-)</div>
     </b:if>
   </div>
 </b:includable>
-</b:widget>
-<b:widget id='AdSense8' locked='false' title='' type='AdSense' visible='false'>
-<b:widget-settings>
-  <b:widget-setting name='style.bgcolor'>#ffffff</b:widget-setting>
-  <b:widget-setting name='style.textcolor'>#000000</b:widget-setting>
-  <b:widget-setting name='style.layout'>250x250</b:widget-setting>
-  <b:widget-setting name='style.bordercolor'>#ffffff</b:widget-setting>
-  <b:widget-setting name='style.urlcolor'>#008000</b:widget-setting>
-  <b:widget-setting name='style.linkcolor'>#0000ff</b:widget-setting>
-  <b:widget-setting name='style.unittype'>TextAndImage</b:widget-setting>
-</b:widget-settings>
-<b:includable id='main'>
+  </b:widget>
+  <b:widget id='AdSense8' locked='false' title='' type='AdSense' version='2' visible='false'>
+    <b:widget-settings>
+      <b:widget-setting name='style.bgcolor'>#ffffff</b:widget-setting>
+      <b:widget-setting name='style.textcolor'>#000000</b:widget-setting>
+      <b:widget-setting name='style.layout'>250x250</b:widget-setting>
+      <b:widget-setting name='style.bordercolor'>#ffffff</b:widget-setting>
+      <b:widget-setting name='style.urlcolor'>#008000</b:widget-setting>
+      <b:widget-setting name='style.linkcolor'>#0000ff</b:widget-setting>
+      <b:widget-setting name='style.unittype'>TextAndImage</b:widget-setting>
+    </b:widget-settings>
+    <b:includable id='main'>
   <div class='widget-content'>
     <b:if cond='data:adCode'>
       <data:adCode/>
@@ -5217,18 +5160,18 @@ x-)</div>
     </b:if>
   </div>
 </b:includable>
-</b:widget>
-<b:widget id='AdSense9' locked='false' title='' type='AdSense' visible='false'>
-<b:widget-settings>
-  <b:widget-setting name='style.bgcolor'>#ffffff</b:widget-setting>
-  <b:widget-setting name='style.textcolor'>#000000</b:widget-setting>
-  <b:widget-setting name='style.layout'>250x250</b:widget-setting>
-  <b:widget-setting name='style.bordercolor'>#ffffff</b:widget-setting>
-  <b:widget-setting name='style.urlcolor'>#008000</b:widget-setting>
-  <b:widget-setting name='style.linkcolor'>#0000ff</b:widget-setting>
-  <b:widget-setting name='style.unittype'>TextAndImage</b:widget-setting>
-</b:widget-settings>
-<b:includable id='main'>
+  </b:widget>
+  <b:widget id='AdSense9' locked='false' title='' type='AdSense' version='2' visible='false'>
+    <b:widget-settings>
+      <b:widget-setting name='style.bgcolor'>#ffffff</b:widget-setting>
+      <b:widget-setting name='style.textcolor'>#000000</b:widget-setting>
+      <b:widget-setting name='style.layout'>250x250</b:widget-setting>
+      <b:widget-setting name='style.bordercolor'>#ffffff</b:widget-setting>
+      <b:widget-setting name='style.urlcolor'>#008000</b:widget-setting>
+      <b:widget-setting name='style.linkcolor'>#0000ff</b:widget-setting>
+      <b:widget-setting name='style.unittype'>TextAndImage</b:widget-setting>
+    </b:widget-settings>
+    <b:includable id='main'>
   <div class='widget-content'>
     <b:if cond='data:adCode'>
       <data:adCode/>
@@ -5237,7 +5180,7 @@ x-)</div>
     </b:if>
   </div>
 </b:includable>
-</b:widget>
+  </b:widget>
 </b:section>
 </div>
 </div>
@@ -5249,21 +5192,21 @@ x-)</div>
 <div id='footer-wrapper'>
 <div class='container row'>
 <b:section class='menu-footer' id='menu-footer' maxwidgets='1' name='Footer Menu' showaddelement='yes'>
-<b:widget id='LinkList76' locked='true' title='Footer Menu Widget' type='LinkList' version='2' visible='false'>
-<b:widget-settings>
-<b:widget-setting name='sorting'>NONE</b:widget-setting>
-<b:widget-setting name='text-1'>About</b:widget-setting>
-<b:widget-setting name='link-1'>https://flexblog-templatesyard.blogspot.com/p/about.html</b:widget-setting>
-<b:widget-setting name='text-0'>Home</b:widget-setting>
-<b:widget-setting name='link-2'>https://flexblog-templatesyard.blogspot.com/p/contact-us.html</b:widget-setting>
-<b:widget-setting name='link-0'>/</b:widget-setting>
-<b:widget-setting name='text-2'>Contact Us</b:widget-setting>
-</b:widget-settings>
-<b:includable id='main'>
+  <b:widget id='LinkList76' locked='true' title='Footer Menu Widget' type='LinkList' version='2' visible='false'>
+    <b:widget-settings>
+      <b:widget-setting name='sorting'>NONE</b:widget-setting>
+      <b:widget-setting name='text-1'>About</b:widget-setting>
+      <b:widget-setting name='link-1'>https://flexblog-templatesyard.blogspot.com/p/about.html</b:widget-setting>
+      <b:widget-setting name='text-0'>Home</b:widget-setting>
+      <b:widget-setting name='link-2'>https://flexblog-templatesyard.blogspot.com/p/contact-us.html</b:widget-setting>
+      <b:widget-setting name='link-0'>/</b:widget-setting>
+      <b:widget-setting name='text-2'>Contact Us</b:widget-setting>
+    </b:widget-settings>
+    <b:includable id='main'>
 <b:include name='widget-title'/>
 <b:include name='content'/>
 </b:includable>
-<b:includable id='content'>
+    <b:includable id='content'>
 <div class='widget-content'>
   <ul>
     <b:loop values='data:links' var='link'>
@@ -5276,7 +5219,7 @@ x-)</div>
   </ul>
 </div>
 </b:includable>
-</b:widget>
+  </b:widget>
 </b:section>
 <div class='copyright-area'>Copyright &#169; <script type='text/javascript'>var year = new Date();document.write(year.getFullYear());</script>
 <a expr:href='data:blog.homepageUrl'>
@@ -5683,22 +5626,18 @@ $('#hot-section .widget-content').each(function() {
 </script>
 
 <!-- Syntax Highlight -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.1/styles/vs2015.min.css" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.1/highlight.min.js"></script>
+<link href='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.1/styles/vs2015.min.css' rel='stylesheet'/>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.1/highlight.min.js'/>
 <!-- and it's easy to individually load additional languages -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.1/languages/go.min.js"></script>
-<script>
-document.addEventListener('DOMContentLoaded', (event) => {
-  document.querySelectorAll('pre code').forEach((block) => {
-
-    hljs.configure({
-      tabReplace: '  ', // 4 spaces
-      classPrefix: ''     // don't append class prefix
-                          // … other options aren't changed
-    });
+<script src='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.1/languages/go.min.js'/>
+<script type='text/javascript'>
+//<![CDATA[
+document.addEventListener('DOMContentLoaded', function(event) {
+  document.querySelectorAll('pre code').forEach(function(block) {
     hljs.highlightBlock(block);
   });
 });
+//]]>
 </script>
 <style type='text/css'>
 .post-content div.code {
