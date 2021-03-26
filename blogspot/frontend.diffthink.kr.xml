@@ -5682,6 +5682,36 @@ $('#hot-section .widget-content').each(function() {
 //]]>
 </script>
 
+<!-- Syntax Highlight -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.1/styles/vs2015.min.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.1/highlight.min.js"></script>
+<!-- and it's easy to individually load additional languages -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.1/languages/go.min.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', (event) => {
+  document.querySelectorAll('pre code').forEach((block) => {
+
+    hljs.configure({
+      tabReplace: '  ', // 4 spaces
+      classPrefix: ''     // don't append class prefix
+                          // … other options aren't changed
+    });
+    hljs.highlightBlock(block);
+  });
+});
+</script>
+<style type='text/css'>
+.post-content div.code {
+  white-space: pre;
+}
+.post-content code.hljs {
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  padding: 1.5em 2em;
+  border-radius: 0.5em;
+}
+</style>
+
 <!-- Facebook SDK -->
 <script type='text/javascript'>
 //<![CDATA[
