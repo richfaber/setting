@@ -2119,12 +2119,13 @@ box-sizing: border-box;
 
 .post-body h2 {
   font-size:28px;
-  margin: 30px 0 20px;
+  margin: 40px 0 20px;
 }
 
 
- .post-body h3{
-    font-size:21px
+ .post-body h3 {
+    font-size:21px;
+    margin: 30px 0 15px;
 }
  .post-body h4{
     font-size:18px
@@ -2135,6 +2136,18 @@ box-sizing: border-box;
  .post-body h6{
     font-size:13px
 }
+
+.post-body p code {
+      padding: 3px 11px;
+    display: inline-block;
+    border-radius: 7px;
+    /* font-weight: 600; */
+    background: #598621;
+    color: #fff;
+    font-size: 12px;
+}
+
+
  blockquote{
     font-style:italic;
     padding:10px;
@@ -4643,7 +4656,7 @@ x-)</div>
   </b:widget>
   <b:widget id='PopularPosts1' locked='false' title='인기글' type='PopularPosts' version='2' visible='true'>
     <b:widget-settings>
-      <b:widget-setting name='numItemsToShow'>6</b:widget-setting>
+      <b:widget-setting name='numItemsToShow'>10</b:widget-setting>
       <b:widget-setting name='showThumbnails'>true</b:widget-setting>
       <b:widget-setting name='showSnippets'>true</b:widget-setting>
       <b:widget-setting name='timeRange'>LAST_MONTH</b:widget-setting>
