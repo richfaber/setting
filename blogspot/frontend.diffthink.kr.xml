@@ -2119,14 +2119,24 @@ box-sizing: border-box;
 
 .post-body h2 {
   font-size:28px;
-  margin: 40px 0 20px;
+  margin: 50px 0 30px;
 }
-
 
  .post-body h3 {
-    font-size:21px;
-    margin: 30px 0 15px;
+   margin: 40px 0 26px;
+    font-size:21px
 }
+
+.post-body h3::before {
+    content: '';
+    display: inline-block;
+    vertical-align: top;
+    width: 4px;
+    background: red;
+    height: 27px;
+    margin: 0px 15px 0 0;
+}
+
  .post-body h4{
     font-size:18px
 }
@@ -2135,16 +2145,6 @@ box-sizing: border-box;
 }
  .post-body h6{
     font-size:13px
-}
-
-.post-body p code {
-      padding: 3px 11px;
-    display: inline-block;
-    border-radius: 7px;
-    /* font-weight: 600; */
-    background: #598621;
-    color: #fff;
-    font-size: 12px;
 }
 
 
@@ -2174,21 +2174,67 @@ box-sizing: border-box;
     line-height:1.5;
     font-weight:400
 }
- .widget .post-body li{
-    margin:5px 0;
-    padding:0;
-    line-height:1.5
+
+ .post-body > p > code {
+    font-family: 'Noto Sans Kr';
+    background-color: #ffeded;
+    border-color: #ffdbdb;
+    color: #ff4949;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 4px;
+    font-size: 14px;
+    padding: 2px 8px 3px;
 }
- .post-body ul{
-    padding:0 0 0 20px
+
+.post-body > ul {
+    position: relative;
+    padding: 10px 20px 13px 36px;
+    margin: 30px 0 30px 80px;
+    font-family: 'Noto Sans Kr';
+    background-color: #ffeded;
+    border-color: #ffdbdb;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 4px;
+    font-size: 14px;
 }
- .post-body ul li:before{
-    content:"\f105";
-    font-family:FontAwesome;
-    font-size:13px;
-    font-weight:400;
-    margin:0 5px 0 0
+
+.post-body > ul::before {
+    position: absolute;
+    top: -7px;
+    left: -70px;
+    content: "\f0a4";
+    font-family: FontAwesome;
+    font-size: 50px;
+    font-weight: 400;
+    margin: 0;
+    vertical-align: top;
+    color: #ff9797;
+    transform: rotate(0deg);
 }
+
+.post-body > ul > li {
+    list-style: none;
+    margin: 10px 0;
+    padding: 0 0 0 8px;
+    padding: 0;
+    line-height: 1.5;
+    text-indent: -8px;
+}
+
+
+ .post-body > ul > li::before {
+    display: inline-block;
+    content: "\f0c8";
+    font-family: FontAwesome;
+    font-size: 10px;
+    font-weight: 400;
+    margin: 3px 8px 0 0;
+    vertical-align: top;
+    color: #ff9797;
+}
+
  .post-body u{
     text-decoration:underline
 }
@@ -3056,9 +3102,6 @@ float:right;
 .widget .post-body ol {
     padding: 0 0 0 15px;
 }
-.post-body ul li {
-    list-style: none;
-}
     </style>
     <b:if cond='data:view.isLayoutMode'>
       <b:template-skin>
@@ -3357,20 +3400,16 @@ var monthFormat = ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월
           //&lt;![CDATA[
             <b:loop values='data:links' var='link'>
               <b:if cond='data:link.name == &quot;postPerPage&quot;'>
-              var postPerPage = <data:link.target/>
-;
+              var postPerPage = <data:link.target/>;
               </b:if>
               <b:if cond='data:link.name == &quot;fixedSidebar&quot;'>
-              var fixedSidebar = <data:link.target/>
-;
+              var fixedSidebar = <data:link.target/>;
               </b:if>
               <b:if cond='data:link.name == &quot;commentsSystem&quot;'>
-              var commentsSystem = &quot;<data:link.target/>
-&quot;;
+              var commentsSystem = &quot;<data:link.target/>&quot;;
               </b:if>
               <b:if cond='data:link.name == &quot;disqusShortname&quot;'>
-              var disqusShortname = &quot;<data:link.target/>
-&quot;;
+              var disqusShortname = &quot;<data:link.target/>&quot;;
               </b:if>
             </b:loop>
           //]]&gt;
@@ -3813,8 +3852,7 @@ var monthFormat = ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월
                     <iframe allowtransparency='allowtransparency' class='blogger-iframe-colorize blogger-comment-from-post' expr:height='data:cmtIframeInitialHeight ?: &quot;90px&quot;' frameborder='0' id='comment-editor' name='comment-editor' src='' width='100%'/>
                     <data:post.cmtfpIframe/>
                     <script type='text/javascript'>
-                  BLOG_CMT_createIframe(&#39;<data:post.appRpcRelayPath/>
-&#39;);
+                  BLOG_CMT_createIframe(&#39;<data:post.appRpcRelayPath/>&#39;);
                     </script>
                   </div>
                 </b:includable>
@@ -4513,8 +4551,7 @@ x-)</div>
           <iframe allowtransparency='allowtransparency' class='blogger-iframe-colorize blogger-comment-from-post' expr:height='data:cmtIframeInitialHeight ?: &quot;90px&quot;' frameborder='0' id='comment-editor' name='comment-editor' src='' width='100%'/>
           <data:post.cmtfpIframe/>
           <script type='text/javascript'>
-                  BLOG_CMT_createIframe(&#39;<data:post.appRpcRelayPath/>
-&#39;);
+                  BLOG_CMT_createIframe(&#39;<data:post.appRpcRelayPath/>&#39;);
           </script>
         </div>
       </b:includable>
@@ -4522,13 +4559,7 @@ x-)</div>
         <script async='async' expr:src='data:post.commentSrc' type='text/javascript'/>
         <b:template-script inline='true' name='threaded_comments'/>
         <script type='text/javascript'>
-                blogger.widgets.blog.initThreadedComments(
-          <data:post.commentJso/>
-,
-          <data:post.commentMsgs/>
-,
-          <data:post.commentConfig/>
-);
+                blogger.widgets.blog.initThreadedComments(<data:post.commentJso/>, <data:post.commentMsgs/>,<data:post.commentConfig/>);
         </script>
       </b:includable>
                 <b:includable id='threadedComments' var='post'>
@@ -4564,16 +4595,12 @@ x-)</div>
       </b:includable>
                 <b:includable id='threadedCommentsDisqus' var='post'>
         <script type='text/javascript'>
-                var disqus_blogger_current_url = &quot;<data:blog.canonicalUrl/>
-&quot;;
+                var disqus_blogger_current_url = &quot;<data:blog.canonicalUrl/>&quot;;
                 if (!disqus_blogger_current_url.length) {
-                  disqus_blogger_current_url = &quot;<data:blog.url/>
-&quot;;
+                  disqus_blogger_current_url = &quot;<data:blog.url/>&quot;;
                 }
-                var disqus_blogger_homepage_url = &quot;<data:blog.homepageUrl/>
-&quot;;
-                var disqus_blogger_canonical_homepage_url = &quot;<data:blog.canonicalHomepageUrl/>
-&quot;;
+                var disqus_blogger_homepage_url = &quot;<data:blog.homepageUrl/>&quot;;
+                var disqus_blogger_canonical_homepage_url = &quot;<data:blog.canonicalHomepageUrl/>&quot;;
   </script>
 </b:includable>
               </b:widget>
@@ -4936,31 +4963,6 @@ x-)</div>
     <b:includable id='main'>
   <div class='ads-in-post'>
     <data:content/>
-  </div>
-</b:includable>
-  </b:widget>
-  <b:widget id='FollowByEmail1' locked='false' title='Follow by Email' type='FollowByEmail' version='2' visible='true'>
-    <b:includable id='main' var='this'>
-  <b:include name='content'/>
-</b:includable>
-    <b:includable id='content'>
-  <div class='widget-content'>
-    <b:if cond='data:defaultTitle or data:title'>
-      <h3 class='title'>
-        <data:title/>
-      </h3>
-    </b:if>
-    <span class='before-text'>
-      <data:skin.vars.followByEmail/>
-    </span>
-    <div class='follow-by-email-inner'>
-      <form action='https://feedburner.google.com/fb/a/mailverify' expr:onsubmit='&quot;window.open(\&quot;https://feedburner.google.com/fb/a/mailverify?uri=&quot; + data:feedPath + &quot;\&quot;, \&quot;popupwindow\&quot;, \&quot;scrollbars=yes,width=550,height=520\&quot;); return true&quot;' method='post' target='popupwindow'>
-        <input autocomplete='off' class='follow-by-email-address' expr:placeholder='data:messages.emailAddress' name='email' type='email'/>
-        <input class='follow-by-email-submit' expr:value='data:messages.subscribe' type='submit'/>
-        <input expr:value='data:feedPath' name='uri' type='hidden'/>
-        <input name='loc' type='hidden' value='en_US'/>
-      </form>
-    </div>
   </div>
 </b:includable>
   </b:widget>
